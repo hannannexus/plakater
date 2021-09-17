@@ -74,17 +74,17 @@
       <div class="navbar-collapse collapse " id="navbarDefault">
         <ul class="navbar-nav">
             
-<li class="nav-item dropdown ">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Plakater
-  </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="property-single.html">Property Single</a>
-    <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-    <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-    <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-  </div>
-</li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plakater
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="property-single.html">Property Single</a>
+                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
+                <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
+                <a class="dropdown-item" href="agent-single.html">Agent Single</a>
+              </div>
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Kort</a>
           </li>
@@ -92,15 +92,15 @@
             <a class="nav-link" href="property-grid.html">Kvalitetsrammer</a>
           </li>
           <li class="nav-item center-content">
-    <div class="logo-mid">
-      <div class="brand-logo"> <a class="navbar-brand" href="index.html"><img src="<?php echo $mobile_logo['url'];?>" alt=""></a></div>
-    </div>
+            <div class="logo-mid">
+              <div class="brand-logo"> <a class="navbar-brand" href="index.html"><img src="<?php echo $mobile_logo['url'];?>" alt=""></a></div>
+            </div>
           </li>
           <li class="nav-item right-align">
             
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block search-icon nav-link" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
-        <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+          <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block search-icon nav-link" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
+            <span class="fa fa-search" aria-hidden="true"></span>
+          </button>
           </li>
           <li class="nav-item right-align">
             <a class="nav-link" href="blog-grid.html">Kontakt os</a>
