@@ -153,4 +153,11 @@
     }
   });
 
+
+  //add custom  css class by jquery
+  
+  jQuery('.nav-item>a ').addClass('nav-link');
+  jQuery('.nav-item .menu-item-has-children>a ').addClass('nav-link dropdown-toggle');
+  jQuery('.sub-menu').addClass('dropdown-menu');
+
 })(jQuery);
