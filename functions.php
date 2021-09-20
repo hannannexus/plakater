@@ -31,6 +31,9 @@ function simon_setup(){
     register_nav_menus(
         array(
             'menu-1' => esc_html__( 'Primary', 'simon' ),
+        ),
+        array(
+            'menu-2' => esc_html__( 'Secondary', 'simon' ),
         )
     );
 }

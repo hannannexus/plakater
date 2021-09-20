@@ -73,24 +73,14 @@
       </button>
       <div class="navbar-collapse collapse " id="navbarDefault">
         <ul class="navbar-nav">
-            
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plakater
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="property-single.html">Property Single</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-                <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-                <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-              </div>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Kort</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Kvalitetsrammer</a>
-          </li>
+          <?php
+            wp_nav_menu(array(
+              'theme_location' =>'menu-1',
+              
+            ));
+          
+          ?>  
+
           <li class="nav-item center-content">
             <div class="logo-mid">
               <div class="brand-logo"> <a class="navbar-brand" href="index.html"><img src="<?php echo $mobile_logo['url'];?>" alt=""></a></div>
@@ -102,12 +92,12 @@
             <span class="fa fa-search" aria-hidden="true"></span>
           </button>
           </li>
-          <li class="nav-item right-align">
+          <!-- <li class="nav-item right-align">
             <a class="nav-link" href="blog-grid.html">Kontakt os</a>
           </li>
           <li class="nav-item right-align">
             <a class="nav-link" href="contact.html">Log ind</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
