@@ -55,3 +55,28 @@ function simon_assets(){
     wp_enqueue_script('main-js',get_template_directory_uri().'/assets/js/main.js',array(),null,true);
 }
 add_action('wp_enqueue_scripts','simon_assets');
+
+
+//add search form
+function simon_search_form($form){
+    $home_dir = home_url("/");
+    
+    $search = <<<FORM
+<form role="search" method="get" class="form-a" action="{$home_dir}">
+<div class="row">
+<div class="col-md-12 mb-2">
+<div class="form-group">
+    <input type="search" class="form-control form-control-lg form-control-a" placeholder="search" value="">
+</div>
+</div>
+<div class="col-md-12">
+<button type="submit" class="btn btn-b">Search</button>
+</div>
+</div>
+</form>
+FORM;
+
+return $search;
+
+}
+add_filter('get_search_form','simon_search_form');

@@ -159,5 +159,10 @@
   jQuery('.nav-item>a ').addClass('nav-link');
   jQuery('.nav-item .menu-item-has-children>a ').addClass('nav-link dropdown-toggle');
   jQuery('.sub-menu').addClass('dropdown-menu');
+  jQuery('ul').find('li.fa.fa-search ').on("click",function(){
+    jQuery('body').removeClass('box-collapse-closed').addClass('box-collapse-open');
+    
+  });
+  
 
 })(jQuery);
