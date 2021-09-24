@@ -61,22 +61,30 @@ add_action('wp_enqueue_scripts','simon_assets');
 function simon_search_form($form){
     $home_dir = home_url("/");
     
-    $search = <<<FORM
-<form role="search" method="get" class="form-a" action="{$home_dir}">
-<div class="row">
-<div class="col-md-12 mb-2">
-<div class="form-group">
-    <input type="search" class="form-control form-control-lg form-control-a" placeholder="search" value="">
-</div>
-</div>
-<div class="col-md-12">
-<button type="submit" class="btn btn-b">Search</button>
-</div>
-</div>
-</form>
-FORM;
+//     $form = <<<FORM
+// <form role="search" method="get" class="form-a" action="{$home_dir}">
+// <div class="row">
+// <div class="col-md-12 mb-2">
+// <div class="form-group">
+//     <input type="search" class="form-control form-control-lg form-control-a" placeholder="search" value="">
+// </div>
+// </div>
+// <div class="col-md-12">
+// <button type="submit" class="btn btn-b">Search</button>
+// </div>
+// </div>
+// </form>
+// FORM;
 
-return $search;
+
+$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+<div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
+<input type="text" value="' . get_search_query() . '" name="s" id="s" />
+<input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
+</div>
+</form>';
+
+return$form;
 
 }
 add_filter('get_search_form','simon_search_form');

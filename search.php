@@ -4,7 +4,7 @@
  */
 ?> 
 
-get_header(); ?>
+<?php get_header(); ?>
 
         <section id="primary" class="content-area">
             <div id="content" class="site-content" role="main">
@@ -15,25 +15,27 @@ get_header(); ?>
                     <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
                 </header><!-- .page-header -->
 
-                <?php //shape_content_nav( 'nav-above' ); ?>
-
                 <?php /* Start the Loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'content', 'search' ); ?>
+                    <a href="<?php the_permalink() ?>">
+                    <h2><?php the_title(); ?></h2>
+                    </a>
+                    <p><?php the_excerpt(); ?></p>
+                    <p><?php the_post_thumbnail( 'large' ); ?></p>
 
                 <?php endwhile; ?>
 
-                <?php //shape_content_nav( 'nav-below' ); ?>
+               
 
             <?php else : ?>
 
-                <?php get_template_part( 'no-results', 'search' ); ?>
+                <?php echo "No result found"; ?>
 
             <?php endif; ?>
 
             </div><!-- #content .site-content -->
         </section><!-- #primary .content-area -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
