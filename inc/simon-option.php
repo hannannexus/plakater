@@ -250,6 +250,47 @@ if( class_exists( 'CSF' ) ) {
 
 	// Monthly discount section end
 
+	// footer section start here 
+		// footer top section start
+		CSF::createSection($prefix,array(
+		    'id'=>'footer_top_link_options',
+		    'title'=>__(' Footer Top  Section ','simon'),
+		));
+		// logo section 
+		CSF::createSection($prefix,array(
+		    'parent'=>'footer_top_link_options',
+		    'title'=> __('Footer top Options ','simon'),
+		    'fields'=>array(
+		        array(
+		            'id'=>'footer_top_text_one',
+		            'type'=>'text',
+		            'title'=>__('Give Footer text one','simon'),
+		        ),
+				array(
+		            'id'=>'footer_top_text_two',
+		            'type'=>'text',
+		            'title'=>__('Give Footer text two','simon'),
+		        ),
+				array(
+		            'id'=>'footer_top_fb_link',
+		            'type'=>'text',
+		            'title'=>__('Give Footer FB link','simon'),
+		        ),
+				array(
+		            'id'=>'footer_top_insta_link',
+		            'type'=>'text',
+		            'title'=>__('Give Footer Instagram link','simon'),
+		        ),
+				array(
+		            'id'=>'footer_top_pinterest_link',
+		            'type'=>'text',
+		            'title'=>__('Give Footer Pinterest link','simon'),
+		        ),
+		    ),
+
+		));
+		// footer top section end 
+	// footer section end here 
 
 
 
