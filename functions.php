@@ -13,7 +13,7 @@ function simon_setup(){
     add_theme_support( 'custom-logo' );
     add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 150,
-		'single_image_width'    => 300,
+		'single_image_width'    => 533,
 
         'product_grid'          => array(
             'default_rows'    => 3,
