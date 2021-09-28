@@ -87,4 +87,3 @@ $form = '<form role="search" method="get" id="searchform" action="' . home_url( 
 return$form;
 
 }
-add_filter('get_search_form','simon_search_form');

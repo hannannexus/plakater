@@ -66,12 +66,39 @@
       </div>
     </div>
   </div>
+
+
   <div class="container-fluid">
     <div class="row">
     <div class="col-md-12">
       <div class="content-area">
       <div class="carusal">
-      <?php echo do_shortcode('[best_selling_products]'); ?>
+      <?php
+        $args = array(
+            'post_type' => 'product',
+            'meta_key' => 'total_sales',
+            'orderby' => 'meta_value_num',
+            'posts_per_page' => 5,
+        );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post(); 
+        global $product;
+
+        ?>
+        <article class="best-seller">
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );      
+            ?>
+            <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <p><?php echo $product->get_sku(); ?></p>
+            <p><?php echo $product->get_price(); ?></p>
+            <?php do_action('front_cart_button'); ?>
+        </article>
+        <?php
+        endwhile;
+        wp_reset_query();
+        ?>
       </div>
     </div>
     </div>
