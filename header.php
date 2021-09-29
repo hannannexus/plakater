@@ -118,7 +118,7 @@
   <span><img src="https://simonholst.dk/wp-content/uploads/2021/03/E-maerket.png" alt=""> Godkendt af e-mærket</span>
   <span><a href="https://dk.trustpilot.com/review/simonholst.dk "><img src="https://simonholst.dk/wp-content/uploads/2021/02/Trustpilot.png" alt=""> 5 stjerner på trustpilot</a></span>
 </div>
-        </div>			
-    </div>
-    <div class="container">
+</div>			
+</div>
+<div class="container">
       

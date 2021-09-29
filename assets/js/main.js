@@ -136,6 +136,27 @@
     }
   });
 
+/*=== best seller carosel === */
+jQuery('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 5,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    769: {
+      items: 2,
+    },
+    992: {
+      items: 3,
+    }
+  }
+});
+
+
   /*--/ Testimonials owl /--*/
   jQuery('#testimonial-carousel').owlCarousel({
     margin: 0,

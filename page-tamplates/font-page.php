@@ -5,9 +5,6 @@
 ?>
 
 
-
-
-
 <?php 
   get_header();
 ?>
@@ -72,8 +69,8 @@
     <div class="row">
     <div class="col-md-12">
       <div class="content-area">
-      <div class="carusal">
-      <?php
+    <div class=" carosel owl-carousel owl-theme">
+         <?php
         $args = array(
             'post_type' => 'product',
             'meta_key' => 'total_sales',
@@ -85,7 +82,7 @@
         global $product;
 
         ?>
-        <article class="best-seller">
+        <article class="best-seller item ">
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );      
             ?>
             <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
@@ -99,10 +96,60 @@
         endwhile;
         wp_reset_query();
         ?>
-      </div>
+      </div> 
+
     </div>
     </div>
   </div>
+
+
+  <!-- category_product display start -->
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="content-area">
+    <div class=" carosel owl-carousel owl-theme">
+         <?php
+            $args = array(
+              'post_type' => 'product',
+              'post_status' => 'publish',
+              'posts_per_page'=> -1,
+              'paged' => get_query_var('paged'),
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'product_cat',
+                  'field' => 'slug',
+                  'terms' => array( 'clothing','accessories' ),
+                  'operator' => 'IN'
+                  )
+                )
+            );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post(); 
+        global $product;
+
+        ?>
+        <article class="best-seller item ">
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );      
+            ?>
+            <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <p><?php echo $product->get_sku(); ?></p>
+            <p><?php echo $product->get_price(); ?></p>
+            <?php do_action('front_cart_button'); ?>
+        </article>
+        <?php
+        endwhile;
+        wp_reset_query();
+        ?>
+      </div> 
+
+    </div>
+    </div>
+  </div>
+
+  <!-- category_product display -->
 </div>
 </section>
 <!--- Section  End --->

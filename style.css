@@ -10,3 +10,25 @@
     Text Domain: simon
     tags: one-column,blog
 */
+
+
+/* custom css for bestseller */
+article.best-seller {
+    display: inline-block;
+}
+article.best-seller img {
+    height: 205px;
+    width: 200px;
+}
+
+article.best-seller a {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+article.best-seller p {
+    text-align: center;
+    font-weight: 700;
+    color: #2eca6a;
+}
