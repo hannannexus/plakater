@@ -8,9 +8,13 @@
 
 <!--- Section Start --->
 <section class="section-wrapper">
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-12">
+
+
+
+
         <div class="catagory-info-area">
          <div class="cat-title text-center">
            <h1>BESTSELLERS</h1>
@@ -24,19 +28,37 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
   <div class="container">
     <div class="row">
-    <div class="col-md-12">
-      <div class="cat-banner">
-        <img class="img-fluid" src="assets/img/cat-banner/Køkkenplakater.jpg" alt="cat-banner Responsive image">
+    <?php 
+        $product_categories = get_terms( 'product_cat', 'hide_empty=0' );
+        if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ):
+            foreach ( $product_categories as $category ):
+      ?>
+      <div class="col-md-3">
+        <div class="cat-banner">
+          <?php 
+            $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+            $image = wp_get_attachment_url( $thumbnail_id );
+            if($image){?>
+              <img src="<?php echo esc_url( $image ); ?>" alt="" />
+
+          <?php }?>      
+
+        </div>
+        <div class="content-area">
+          <div class="carusal">
+          <h4><a href="<?php echo esc_url( get_term_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a></h4>
+          </div>
+        </div>
+
+
       </div>
-      <div class="content-area">
-      <div class="carusal">
-      <?php //echo do_shortcode('[best_selling_products]'); ?>
-      </div>
-    </div>
-    </div>
+    <?php endforeach;?>
+    <?php endif;?>
   </div>
 
 </section>

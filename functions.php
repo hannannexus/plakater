@@ -87,3 +87,30 @@ $form = '<form role="search" method="get" id="searchform" action="' . home_url( 
 return$form;
 
 }
+
+// add custome class for single product page
+
+// function simon_add_class_single_product_page($classes){
+//     if(is_product()){
+//         $classes[] = "main2";
+//     }
+
+//     return $classes;
+// }
+// add_filter('body_class','simon_add_class_single_product_page');
+
+/*
+function simon_add_container_js(){
+    if(is_front_page()){?>
+    <script>
+        //jQuery("body").find(".container").removeClass("container").addClass("main");
+        var element = jQuery('.container');
+        element.addClass('main');
+        element.removeClass('container');
+    </script>
+
+   <?php }
+}
+add_filter('wp_head','simon_add_container_js');
+
+*/
