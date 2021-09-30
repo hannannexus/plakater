@@ -137,7 +137,7 @@
   });
 
 /*=== best seller carosel === */
-jQuery('.owl-carousel').owlCarousel({
+jQuery('#best_carosel').owlCarousel({
   loop: true,
   margin: 5,
   autoplay: true,
@@ -145,13 +145,33 @@ jQuery('.owl-carousel').owlCarousel({
   autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1,
-    },
-    769: {
       items: 2,
     },
-    992: {
+    769: {
       items: 3,
+    },
+    992: {
+      items: 5,
+    }
+  }
+});
+
+/*=== Cat a carosel === */
+jQuery('#cat_a').owlCarousel({
+  loop: true,
+  margin: 5,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    769: {
+      items: 3,
+    },
+    992: {
+      items: 5,
     }
   }
 });

@@ -1,5 +1,5 @@
  	<!--FOOTER-->
-</div><!-- .container  -->
+</main><!-- .main  -->
 <!-- ======= Footer ======= -->
 <section class="section-footer">
  

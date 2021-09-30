@@ -69,13 +69,13 @@
     <div class="row">
     <div class="col-md-12">
       <div class="content-area">
-    <div class=" carosel owl-carousel owl-theme">
+    <div id="best_carosel" class=" carosel owl-carousel owl-theme">
          <?php
         $args = array(
             'post_type' => 'product',
             'meta_key' => 'total_sales',
             'orderby' => 'meta_value_num',
-            'posts_per_page' => 5,
+            'posts_per_page' => 10,
         );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); 
@@ -108,7 +108,7 @@
     <div class="row">
     <div class="col-md-12">
       <div class="content-area">
-    <div class=" carosel owl-carousel owl-theme">
+    <div id="cat_a" class=" carosel owl-carousel owl-theme">
          <?php
             $args = array(
               'post_type' => 'product',
