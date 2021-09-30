@@ -123,17 +123,21 @@
   jQuery('#new-carousel').owlCarousel({
     loop: true,
     margin: 30,
-    responsive: {
-      0: {
-        items: 1,
+    responsive:{
+      0:{
+          items:1,
+          nav:true
       },
-      769: {
-        items: 2,
+      600:{
+          items:3,
+          nav:true
       },
-      992: {
-        items: 3,
+      1000:{
+          items:5,
+          nav:true,
+         
       }
-    }
+  }
   });
 
 /*=== best seller carosel === */
@@ -143,17 +147,21 @@ jQuery('#best_carosel').owlCarousel({
   autoplay: true,
   autoplayTimeout: 3000,
   autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 2,
+  responsive:{
+    0:{
+        items:1,
+        nav:true
     },
-    769: {
-      items: 3,
+    600:{
+        items:3,
+        nav:true
     },
-    992: {
-      items: 5,
+    1000:{
+        items:5,
+        nav:true,
+       
     }
-  }
+}
 });
 
 /*=== Cat a carosel === */
@@ -168,7 +176,7 @@ jQuery('#cat_a').owlCarousel({
       items: 2,
     },
     769: {
-      items: 3,
+      items: 5,
     },
     992: {
       items: 5,

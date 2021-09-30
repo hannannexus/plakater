@@ -129,7 +129,7 @@
         global $product;
 
         ?>
-        <article class="best-seller item ">
+        <div class="best-seller item ">
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );      
             ?>
             <img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
@@ -138,7 +138,7 @@
             <p><?php echo $product->get_sku(); ?></p>
             <p><?php echo $product->get_price(); ?></p>
             <?php do_action('front_cart_button'); ?>
-        </article>
+          </div>
         <?php
         endwhile;
         wp_reset_query();
