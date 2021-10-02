@@ -33,12 +33,15 @@
 
   <div class="container">
     <div class="row">
+
+
     <?php 
         $product_categories = get_terms( 'product_cat', 'hide_empty=0' );
         if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ):
             foreach ( $product_categories as $category ):
       ?>
       <div class="col-md-3">
+
         <div class="cat-banner">
           <?php 
             $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
