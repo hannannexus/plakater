@@ -140,7 +140,7 @@ add_filter('woocommerce_output_related_products_args','simon_releated_product',9
 add_filter( 'woocommerce_upsell_display_args', 'simon_upsell_products', 9999 );
  
 function simon_upsell_products( $args ) {
-    $args['posts_per_page'] = 2;
-    $args['columns'] = 2; 
+    $args['posts_per_page'] = 5;
+    $args['columns'] = 5; 
     return $args;
 }

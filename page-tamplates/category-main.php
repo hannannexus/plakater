@@ -48,7 +48,7 @@
         <?php endif; ?>
     </div>
       <div class="content-area">
-        <div class="cat_products">
+        <div class="">
         
         </div>
      </div>
@@ -70,7 +70,7 @@
 
                 <h2></h2>
 
-                    <div class="product">    
+                    <div class="cat_product">    
 
                         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
@@ -108,7 +108,7 @@
         <?php endif; ?>
     </div>
       <div class="content-area">
-        <div class="cat_products">
+        <div class="">
         
         </div>
      </div>
@@ -129,7 +129,7 @@
 
                 <h2></h2>
 
-                    <div class="product">    
+                    <div class="cat_product">    
 
                         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
@@ -167,7 +167,7 @@
         <?php endif; ?>
     </div>
       <div class="content-area">
-        <div class="cat_products">
+        <div class="">
         
         </div>
      </div>
@@ -188,7 +188,7 @@
 
                 <h2></h2>
 
-                    <div class="product">    
+                    <div class="cat_product">    
 
                         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
