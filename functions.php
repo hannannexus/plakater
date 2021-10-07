@@ -1,6 +1,7 @@
 <?php 
 
 include(get_template_directory().'/inc/simon-option.php');
+include(get_template_directory().'/inc/metaboxes.php');
 
 function simon_setup(){
     load_theme_textdomain( 'simon', get_template_directory_uri().'/languages' );
@@ -114,3 +115,32 @@ function simon_add_container_js(){
 add_filter('wp_head','simon_add_container_js');
 
 */
+
+// add sold out badge for woocommerce shop
+
+// add_action( 'woocommerce_before_shop_loop_item_title', function() {
+//     global $product;
+//     if ( !$product->is_in_stock() ) {
+//         echo '<span class="now_sold">Now Sold</span>';
+//     }
+//  });
+
+
+/*
+ change releated product default product number
+*/
+
+function simon_releated_product($argc){
+    $argc['posts_per_page'] = 5;
+    $argc['columns'] = 5;
+    return $argc;
+}
+add_filter('woocommerce_output_related_products_args','simon_releated_product',9999);
+
+add_filter( 'woocommerce_upsell_display_args', 'simon_upsell_products', 9999 );
+ 
+function simon_upsell_products( $args ) {
+    $args['posts_per_page'] = 2;
+    $args['columns'] = 2; 
+    return $args;
+}

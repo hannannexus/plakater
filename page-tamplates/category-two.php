@@ -7,6 +7,18 @@
 
 <?php get_header();?>
 
+<section class="section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--- Section Start --->
 <section class="section-wrapper">
 
@@ -46,6 +58,7 @@
   </div>
 
 </section>
+
 <!--- Section  End --->
 
 
